@@ -1,7 +1,5 @@
 package com.handtruth.lessons.lesson2.task1;
 
-import com.sun.xml.internal.bind.v2.TODO;
-
 class IfElse {
 
     /**
