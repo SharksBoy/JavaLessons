@@ -8,8 +8,7 @@ class Simple {
      * Вычислить дискриминант квадратного уравнения
      */
     double discriminant(double a, double b, double c) {
-        double dis = Math.pow(b,2) - 4 * a * c;
-        return dis;
+        return Math.pow(b,2) - 4 * a * c;
     }
 
     /**
@@ -18,9 +17,8 @@ class Simple {
      * Поиск одного из корней квадратного уравнения
      */
     double sqRoot(double a, double b, double c) {
-        double dis = Math.pow(b,2) - 4 * a * c;
-        double x = (-b + Math.pow(dis, 0.5)) / 2 * a;
-        return x;
+        double _dis = discriminant(a, b, c);
+        return (-b + Math.pow(_dis, 0.5)) / 2 * a;
     }
 
     /**
@@ -30,8 +28,7 @@ class Simple {
      * Рассчитать время в секундах, прошедшее с начала суток (30035 в данном случае).
      */
     double seconds(int hours, int minutes, int seconds) {
-        int v = hours * 3600 + minutes * 60 + seconds;
-        return v;
+        return hours * 3600 + minutes * 60 + seconds;
     }
 
     /**
@@ -40,10 +37,9 @@ class Simple {
      * Необходимо вывести число, полученное из заданного перестановкой цифр в обратном порядке (например, 874).
      */
     int numberRevert(int number) {
-        StringBuilder _str = new StringBuilder();
-        _str.append(number);
-        _str.reverse();
-        int s = Integer.parseInt(String.valueOf(_str));
-        return s;
+        StringBuilder str = new StringBuilder();
+        str.append(number);
+        str.reverse();
+        return Integer.parseInt(String.valueOf(str));
     }
 }
