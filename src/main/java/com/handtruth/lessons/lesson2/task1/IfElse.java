@@ -1,5 +1,6 @@
 package com.handtruth.lessons.lesson2.task1;
 
+
 class IfElse {
 
     /**
