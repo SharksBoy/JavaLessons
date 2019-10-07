@@ -63,7 +63,18 @@ class IfElse {
      */
 
     int segmentLength(int a, int b, int c, int d) {
-        // TODO your code
-        return -1;
+        if (c > b && d > b || a > c && a > d)
+            return -1;
+        else
+            if (a <= c && b >= d)
+                return (d - c);
+            else
+                if (c <= a && d >= b)
+                    return (b - a);
+                else
+                    if (a <= c)
+                        return (b - c);
+                    else
+                        return (d - a);
     }
 }
