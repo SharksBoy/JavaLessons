@@ -18,8 +18,8 @@ class IfElseTest {
     @Tag("Trivial")
     void compare() {
         assertEquals(1, ifElse.compare(5, 3));
-        assertEquals(0, ifElse.compare(4, 5));
-        assertEquals(-1, ifElse.compare(5, 5));
+        assertEquals(-1, ifElse.compare(4, 5));
+        assertEquals(0, ifElse.compare(5, 5));
     }
 
     @Test
