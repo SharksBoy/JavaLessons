@@ -17,8 +17,8 @@ class Simple {
      * Поиск одного из корней квадратного уравнения
      */
     double sqRoot(double a, double b, double c) {
-        double _dis = discriminant(a, b, c);
-        return (-b + Math.pow(_dis, 0.5)) / 2 * a;
+        double dis = discriminant(a, b, c);
+        return (-b + Math.pow(dis, 0.5)) / 2 * a;
     }
 
     /**
@@ -27,7 +27,8 @@ class Simple {
      * Пользователь задает время в часах, минутах и секундах, например, 8:20:35.
      * Рассчитать время в секундах, прошедшее с начала суток (30035 в данном случае).
      */
-    double seconds(int hours, int minutes, int seconds) {
+    double seconds(int hours, int minutes, int seconds)
+    {
         return hours * 3600 + minutes * 60 + seconds;
     }
 
@@ -37,9 +38,9 @@ class Simple {
      * Необходимо вывести число, полученное из заданного перестановкой цифр в обратном порядке (например, 874).
      */
     int numberRevert(int number) {
-        StringBuilder str = new StringBuilder();
-        str.append(number);
-        str.reverse();
-        return Integer.parseInt(String.valueOf(str));
+        int ch1 = number / 100;
+        int ch2 = number / 10 % 10 * 10;
+        int ch3 = number % 10 * 100;
+        return ch1 + ch2 + ch3;
     }
 }
