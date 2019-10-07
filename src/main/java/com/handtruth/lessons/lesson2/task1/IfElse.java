@@ -12,8 +12,13 @@ class IfElse {
      * Если второе больше первого - -1
      */
     int compare(int a, int b) {
-        // TODO your code
-        return 0;
+        if (a == b)
+            return (0);
+        else
+        if (a > b)
+            return (1);
+        else
+            return (-1);
     }
 
 
@@ -24,8 +29,15 @@ class IfElse {
      * вернуть строку вида: «21 год», «32 года», «12 лет».
      */
     String ageDescription(int age) {
-        // TODO your code
-        return "TODO";
+        String slovo = "";
+        if ( age % 10 == 1 && age /10 != 11)
+            slovo = "год";
+        else
+            if (11 <= age % 100 && age % 100 <= 14 || 4 < age % 10)
+                slovo = "лет";
+            else
+                slovo = "года";
+        return (age +" "+ slovo);
     }
 
     /**
