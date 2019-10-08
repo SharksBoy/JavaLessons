@@ -27,8 +27,7 @@ class Simple {
      * Пользователь задает время в часах, минутах и секундах, например, 8:20:35.
      * Рассчитать время в секундах, прошедшее с начала суток (30035 в данном случае).
      */
-    double seconds(int hours, int minutes, int seconds)
-    {
+    double seconds(int hours, int minutes, int seconds) {
         return hours * 3600 + minutes * 60 + seconds;
     }
 

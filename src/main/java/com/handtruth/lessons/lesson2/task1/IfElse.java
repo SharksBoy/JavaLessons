@@ -29,15 +29,15 @@ class IfElse {
      * вернуть строку вида: «21 год», «32 года», «12 лет».
      */
     String ageDescription(int age) {
-        String slovo = "";
+        String word = "";
         if ( age % 10 == 1 && age /10 != 11)
-            slovo = "год";
+            word = "год";
         else
             if (11 <= age % 100 && age % 100 <= 14 || 4 < age % 10)
-                slovo = "лет";
+                word = "лет";
             else
-                slovo = "года";
-        return (age +" "+ slovo);
+                word = "года";
+        return (age +" "+ word);
     }
 
     /**
@@ -49,8 +49,19 @@ class IfElse {
      * Если такой треугольник не существует, вернуть -1.
      */
     int triangleKind(double a, double b, double c) {
-        // TODO your code
+    double cos_c = (Math.pow(a,2) + Math.pow(c,2) - Math.pow(b,2)) / (2 * a * c);
+    double cos_a = (Math.pow(a,2) + Math.pow(b,2) - Math.pow(c,2)) / (2 * a * b);
+    double cos_b = (Math.pow(b,2) + Math.pow(c,2) - Math.pow(a,2)) / (2 * b * c);
+    if (a + b <= c || b + c <= a || c + a <= b)
         return -1;
+    else
+        if (0 < cos_a && cos_a < 1 && 0 < cos_b && cos_b < 1 && 0 < cos_c && cos_c < 1)
+            return 0;
+        else
+            if (cos_a == 0 || cos_b == 0 || cos_c ==0)
+                return 1;
+            else
+                return 2;
     }
 
     /**
